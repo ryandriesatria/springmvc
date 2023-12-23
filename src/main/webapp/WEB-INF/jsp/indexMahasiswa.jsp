@@ -48,12 +48,12 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                         <td>${mhs.faknm}</td>
                         <td>
                             <div class="row justify-content-around">
-                                <!-- <a
+                                <a
                                     class="btn btn-primary"
                                     href="./${mhs.mhsnim}"
                                 >
                                     Detail
-                                </a> -->
+                                </a>
                                 <a
                                     class="btn btn-info"
                                     href="./${mhs.mhsnim}/update"
