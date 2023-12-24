@@ -67,7 +67,14 @@ uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
                             <c:forEach var="fak" items="${fakultas}">
                                 <optgroup label="Fakultas ${fak.faknm}">
                                     <c:forEach var="prod" items="${fak.prodi}">
-                                        <option>${prod.prodnm}</option>
+                                        <c:choose>
+                                            <c:when test="${mhs.prodnm.equals(prod.prodnm)}" >
+                                                <option selected>${prod.prodnm}</option>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <option>${prod.prodnm}</option>
+                                            </c:otherwise>
+                                        </c:choose>
                                     </c:forEach>
                                 </optgroup>
                             </c:forEach>
